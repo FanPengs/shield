@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+		
+		*{padding: 0px; margin: 0px;}
+		a{text-decoration: none;} button{cursor: pointer;}
+		body{min-width: 1240px; font: 12px/1.5 PingFangSC-Regular,Tahoma,Microsoft Yahei; 
+		    display: block;
+		}
+		
+		.site_head{position: absolute; z-index: 3;top: 0;left: 0; width: 100%; min-width: 1000px;}
+		
+		.head_line{position: absolute;top: 0;left: 0; width: 100%; height: 1px; overflow: hidden;z-index: 5;
+			background: linear-gradient(to right,#ff5500,#ff5500);
+		}
+		
+		   .head_inner{width: 1240px; height: 73px; position: relative;margin: 0 auto; }
+		
+		     .login{position: relative; width: 160px; }
+		
+		       .link_login{display: block; width: 158px; height: 73px; background: url(login.jpg);}
+		
+		     .search{background-color: rgba(255,255,255,.4); position: absolute; left: 50%; width: 580px; height: 40px; 
+					border-radius: 20px; margin-left: -290px; top: 16px; background-color:none; }
+				.search_form{position: relative;width: 100%;height: 100%; display: block;}
+					.search_inner{position: relative;width: 100%; height: 100%;}
+		.icon_search{position: absolute; top: 10px; left: 12px; display: inline-block; width: 20px; height: 20px;}
+		   .svg_s_icon{display: inline-block; width: 100%;height: 100; color:#ff5500;}
+		.search_keyword{position: relative; height: 40px; margin: 0 105px 0 35px;}
+			.search_input{position: absolute; width: 100%;height: 100%; padding: 0;line-height: 40px;background: none; font-size: 14px; border: 0 none; color: #222; outline: none;}
+		.search_btn{position: absolute; display: block; top: 0;right: 0;padding-right: 5px; background:azure; outline: none;border: none; height: 40px; line-height: 40px; width: 100px; border-radius: 0 20px 20px 0; font-size: 16px;}
+		
+		
+		
+		.sh:after{content: ''; clear: both;}
+		.quick{position: absolute; top: 21px; z-index: 5;right: 0px; display: block;}
+		.quick_time{float: left;}
+		.quick_link{position: relative;z-index: 5px; display: block;height: 43px;padding: 0 10px; cursor: pointer;}
+		.quick_link .icon{display: block;height: 20px; width: 20px; margin: 0 auto 2px; color: inherit;}
+		.quick_link .svg_icon{display: block;width: 20px; height: 20px; margin: auto;}
+		.quick_link .quick_text{opacity: 1; display: block; color: azure;}
+		
+		
+		.site_nav{position: absolute; left: 0; top: 80px; z-index: 99;}
+		.nav_inner{position: relative;width: 1240px; margin: 0 auto; font-size: 14px;}
+		.nav_area_wrap{position: relative; height: 32px; overflow: hidden;margin-right: 186px; }
+		.nav_area{position: relative;height: 32px;overflow: hidden; padding-left: 13px; }
+		.nav_area a{color: azure;}
+		.nav_area .link_nav{position: relative;display: inline-block;padding: 0 8px;margin-bottom: 7px; font-size: 14px;}
+		
+		.nav_vip{position: absolute; width: 60px; top: 0px; right: 60px;height: 26px;}
+		.nav_vip .link_vip{display: block; padding-top: 5px; padding-left: 3px;}
+		.nav_vip .icon_vip{display: inline-block;width: 16px; height: 16px;}
+		.nav_vip .svg_icon_vip{display: inline-block; width: 100%;height: 100%;}
+		.nav_vip .icon_text{display: inline-block; margin-top: -3px;margin-left: 0px; vertical-align: top;color: azure;}
+		
+		.download{position: absolute; width: 60px; top: 0; right: 0px; height: 26px; }
+		.download .link_vip{display: block; padding-top: 5px; padding-left: 3px;}
+		.download .icon_vip{display: inline-block;width: 16px; height: 16px;}
+		.download .svg_icon_vip{display: inline-block; width: 100%;height: 100%;}
+		.download .icon_text{display: inline-block; margin-top: -3px;margin-left: 0px; vertical-align: top;color: azure;}
+		
+		
+		
+		.site_slider{position:relative; height: 590px; overflow: hidden;}
+		
+		 .slider_con{ position: absolute; width: 100%;height: 590px; overflow: hidden;}
+		
+		.tese_text{ position: absolute; width: 100%; height: 590px; overflow: hidden;}
+		
+		.tese_text .jieshao{position: absolute; top: 380px; left: 55px;width: 450px;height: 40px;line-height: 40px;border-top: 1px solid #fff; border-bottom: 1px solid #fff; font-size: 14px;color: #fff;}
+		.tese_text .youling{position: absolute; top: 450px;left: 55px; width: 300px; height: 35px;line-height: 35px; border: 1px solid #fff;
+							color: aliceblue; font-size: 16px; text-align: center; display: block; }
+		.tese_text .youling .line{}
+		
+		.ts1{background: url(5.jpg) center top no-repeat;}
+		.ts2{background: url(71.jpg) center top no-repeat;}
+		.ts3{background: url(2.jpg) center top no-repeat;}
+		.ts4{background: url(meinv.jpg) center top no-repeat;}
+		.ts5{background: url(1.jpg) center top no-repeat;}
+		.ts6{background: url(3.jpg) center top no-repeat;}
+		.ts7{background: url(4.jpg) center top no-repeat;}
+		.ts8{background: url(6.jpg) center top no-repeat;}
+		.ts9{background: url(meinvsiwa.jpg) center top no-repeat;}
+		
+		
+		.ts_right{position: absolute; width: 180px; height: 505px; right: 50%; top: 80px; padding-top: 115px; margin-right: -620px;
+				background: url(bg.png)no-repeat;}
+		
+		.ts_right .on{background: url("ch.png") 10px center no-repeat;}
+		.ts_right li{display:block;margin: 7px 0; width: 180px; font-size: 14px;color: aliceblue;float: left;text-indent: 28px;
+					background: url("ca.png") 10px center no-repeat; cursor: pointer;}
+	</style>
+</head>
+<body>
+	<div class="site_head">
+		
+	   <svg class="txp_svg_sprite txp_svg_sprite_head" display="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      
+        <symbol id="svg_icon_client" viewBox="0 0 20 20">
+            <path d="M16 15H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2zm0-10H4v8h12V5zM7 16h6a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2z"></path>
+        </symbol>
+		
+        <symbol id="svg_icon_upload" viewBox="0 0 20 20">
+            <path d="M17.818 14.444A8.987 8.987 0 0 1 10 19c-3.241 0-6.063-1.725-7.648-4.294a.99.99 0 0 1-.316-.723 1 1 0 0 1 1-1c.383 0 .706.223.874.54l.058-.029C5.179 15.58 7.413 17 10 17c2.58 0 4.809-1.412 6.022-3.489l.043.021a.988.988 0 0 1 .865-.528 1 1 0 0 1 1 1 .957.957 0 0 1-.112.44zm-5.572-7.769L11 5.429V12a1 1 0 0 1-2 0V5.469L7.765 6.704a1.04 1.04 0 0 1-1.469-1.47l2.938-2.938c.211-.211.491-.303.767-.293.282-.015.568.076.784.292l2.92 2.92a1.033 1.033 0 0 1-1.459 1.46z"></path>
+        </symbol>
+		
+        <symbol id="svg_icon_time" viewBox="0 0 20 20">
+            <path d="M10 12a1 1 0 0 1-1-1V6a1 1 0 0 1 2 0v4h2a1 1 0 0 1 0 2h-3zm7.911 2.253a.988.988 0 0 1-.949.747 1 1 0 0 1-1-1c0-.204.076-.382.18-.54l-.068-.042c.572-1.015.926-2.17.926-3.418a7 7 0 1 0-7 7c1.284 0 2.472-.371 3.507-.975l.022.04a.97.97 0 0 1 .471-.134 1 1 0 0 1 1 1c0 .37-.21.679-.508.852l.003.006c-.015.009-.032.015-.047.023-.032.017-.061.034-.095.047A8.924 8.924 0 0 1 10 19a9 9 0 0 1-9-9 9 9 0 0 1 18 0 8.931 8.931 0 0 1-1.089 4.253z"></path>
+        </symbol>
+                
+        <symbol id="svg_icon_collect" viewBox="0 0 20 20">
+            <path d="M19 15h-2v2a1 1 0 0 1-2 0v-2h-2a1 1 0 0 1 0-2h2v-2a1 1 0 0 1 2 0v2h2a1 1 0 0 1 0 2zm-.067-7c0 .049-.021.091-.028.138-.004.021 0 .042-.004.063l-.008-.001a.986.986 0 0 1-.96.8 1 1 0 0 1-1-1c0-.054.022-.101.031-.153l-.019-.003c.184-.882.057-1.979-.881-2.927-.471-.476-1.418-.91-2.252-.91-1.427 0-2.266 1.172-3.131 1.802L9.496 6.894 8.287 5.828c-.594-.561-1.746-1.823-3.144-1.823-.834 0-1.679.316-2.253.897-1.31 1.323-1.105 3.318-.176 4.34l6.751 6.069.016-.015 1.153 1.037-.017.017a.985.985 0 0 1 .254.649 1 1 0 0 1-1 1 .988.988 0 0 1-.647-.252l-.005.004-.037-.033c-.008-.008-.017-.014-.024-.022l-7.65-6.781c-2.013-2.054-2.013-5.349-.03-7.373A5.074 5.074 0 0 1 5.131 2c1.383 0 2.681.548 3.655 1.543l.706.722.707-.722A5.072 5.072 0 0 1 13.853 2c1.383 0 2.681.548 3.654 1.543 1.17 1.195 1.624 2.831 1.413 4.389.001.024.013.044.013.068zm-9.441 9.994l-.033-.029h.065l-.032.029z"></path>
+        </symbol>
+       
+		
+      </svg>
+	
+	    <div class="head_line"></div>
+		
+		<div class="head_inner">
+			<h1 class="login">
+				<a class="link_login"></a>
+			</h1>
+			<div class="search">
+				<form class="search_form">
+					<div class="search_inner">
+						<i class="icon_search">
+							<svg class="svg_s_icon" viewBox="0 0 20 20">
+								<path d="M18.704 18.704a1.04 1.04 0 0 1-1.47 0l-1.938-1.938a1.038 1.038 0 1 1 1.469-1.469l1.939 1.938a1.04 1.04 0 0 1 0 1.469zM9 17A8 8 0 1 1 9 1a8 8 0 0 1 0 16zM9 3a6 6 0 1 0 0 12A6 6 0 0 0 9 3z"></path>
+							</svg>
+						</i>
+						<div class="search_keyword">
+							<input class="search_input" name="keyword" placeholder="神盾局">
+						</div>
+						<button class="search_btn" type="submit"><span class="btn_inner">神盾搜索</span></button>
+					</div>
+				</form>
+			</div>
+			<div class="quick sh">
+				<div class="quick_time">
+					<a class="quick_link">
+						<i class="icon icon_time">
+							<svg class="svg_icon" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_time"></use></svg>
+						</i>
+						<div class="quick_text">科研</div>
+					</a>
+				</div>
+				
+				<div class="quick_time">
+					<a class="quick_link">
+						<i class="icon icon_time">
+							<svg class="svg_icon" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_upload"></use></svg>
+						</i>
+						<div class="quick_text">医疗</div>
+					</a>
+				</div>
+				
+				<div class="quick_time">
+					<a class="quick_link">
+						<i class="icon icon_time">
+							<svg class="svg_icon" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_collect"></use></svg>
+						</i>
+						<div class="quick_text">学院</div>
+					</a>
+				</div>
+				
+				<div class="quick_time">
+					<a class="quick_link">
+						<i class="icon icon_time">
+							<svg class="svg_icon" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_client"></use></svg>
+						</i>
+						<div class="quick_text">基地</div>
+					</a>
+				</div>
+				
+				<div class="quick_time">
+					<a class="quick_link">
+						<i class="icon icon_time">
+							<svg class="svg_icon" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_collect"></use></svg>
+						</i>
+						<div class="quick_text">学院</div>
+					</a>
+				</div>
+				
+				<div class="quick_time">
+					<a class="quick_link">
+						<i class="icon icon_time">
+							<svg class="svg_icon" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_client"></use></svg>
+						</i>
+						<div class="quick_text">基地</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="site_nav">
+		<div class="nav_inner">
+			<div class="nav_area_wrap">
+				<div class="nav_area">
+					<a href="http:" class="link_nav" target="_blank">电视剧</a>
+					<a href="http:" class="link_nav" target="_blank">综艺</a>
+					<a href="http:" class="link_nav" target="_blank">电影</a>
+					<a href="http:" class="link_nav" target="_blank">VIP影院</a>
+					<a href="http:" class="link_nav" target="_blank">医疗</a>
+					<a href="http:" class="link_nav" target="_blank">音乐</a>
+					<a href="http:" class="link_nav" target="_blank">美剧</a>
+					<a href="http:" class="link_nav" target="_blank">微电影</a>
+					<a href="http:" class="link_nav" target="_blank">新闻</a>
+					<a href="http:" class="link_nav" target="_blank">科技</a>
+					<a href="http:" class="link_nav" target="_blank">游戏</a>
+					<a href="http:" class="link_nav" target="_blank">原创</a>
+					<a href="http:" class="link_nav" target="_blank">时尚</a>
+					<a href="http:" class="link_nav" target="_blank">拍客</a>
+					<a href="http:" class="link_nav" target="_blank">生活</a>
+					<a href="http:" class="link_nav" target="_blank">NBA</a>
+					<a href="http:" class="link_nav" target="_blank">旅游</a>
+					<a href="http:" class="link_nav" target="_blank">搞笑</a>
+					<a href="http:" class="link_nav" target="_blank">演唱会</a>
+					<a href="http:" class="link_nav" target="_blank">游戏</a>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	
+	
+	<div class="site_slider">
+		<div class="slider_con">
+		<div class="tese_text ts1" style="display:block">
+			<a class="jieshao">S.H.I.E.L.D. Protect The World. If I'm the only one,I'm better than none.</a>
+			<a class="youling" href="" title="诛仙一念乾坤">
+		   		<span class="line line-top"></span>
+				<span class="line line-right"></span>
+				<span class="line line-bottom"></span>
+				<span class="line line-left"></span>
+				一念乾坤
+			</a>
+		</div>
+		<div class="tese_text ts2" style="display:none">
+			<a class="jieshao">S.H.I.E.L.D. Protect The World. If I'm the only one,I'm better than none.</a>
+			<a class="youling" href="" title="诛仙一念乾坤">
+		   		<span class="line line-top"></span>
+				<span class="line line-right"></span>
+				<span class="line line-bottom"></span>
+				<span class="line line-left"></span>
+				一念乾坤
+			</a>
+		</div>
+		<div class="tese_text ts3" style="display:none">
+			<a class="jieshao">S.H.I.E.L.D. Protect The World. If I'm the only one,I'm better than none.</a>
+			<a class="youling" href="" title="诛仙一念乾坤">
+		   		<span class="line line-top"></span>
+				<span class="line line-right"></span>
+				<span class="line line-bottom"></span>
+				<span class="line line-left"></span>
+				一念乾坤
+			</a>
+		</div>
+		<div class="tese_text ts4" style="display:none">
+			<a class="jieshao">S.H.I.E.L.D. Protect The World. If I'm the only one,I'm better than none.</a>
+			<a class="youling" href="" title="诛仙一念乾坤">
+		   		<span class="line line-top"></span>
+				<span class="line line-right"></span>
+				<span class="line line-bottom"></span>
+				<span class="line line-left"></span>
+				一念乾坤
+			</a>
+		</div>
+		<div class="tese_text ts5" style="display:none">
+			<a class="jieshao">S.H.I.E.L.D. Protect The World. If I'm the only one,I'm better than none.</a>
+			<a class="youling" href="" title="诛仙一念乾坤">
+		   		<span class="line line-top"></span>
+				<span class="line line-right"></span>
+				<span class="line line-bottom"></span>
+				<span class="line line-left"></span>
+				一念乾坤
+			</a>
+		</div>
+		<div class="tese_text ts6" style="display:none">
+			<a class="jieshao">S.H.I.E.L.D. Protect The World. If I'm the only one,I'm better than none.</a>
+			<a class="youling" href="" title="诛仙一念乾坤">
+		   		<span class="line line-top"></span>
+				<span class="line line-right"></span>
+				<span class="line line-bottom"></span>
+				<span class="line line-left"></span>
+				一念乾坤
+			</a>
+		</div>
+		<div class="tese_text ts7" style="display:none">
+			<a class="jieshao">S.H.I.E.L.D. Protect The World. If I'm the only one,I'm better than none.</a>
+			<a class="youling" href="" title="诛仙一念乾坤">
+		   		<span class="line line-top"></span>
+				<span class="line line-right"></span>
+				<span class="line line-bottom"></span>
+				<span class="line line-left"></span>
+				一念乾坤
+			</a>
+		</div>
+		<div class="tese_text ts8" style="display:none">
+			<a class="jieshao">S.H.I.E.L.D. Protect The World. If I'm the only one,I'm better than none.</a>
+			<a class="youling" href="" title="诛仙一念乾坤">
+		   		<span class="line line-top"></span>
+				<span class="line line-right"></span>
+				<span class="line line-bottom"></span>
+				<span class="line line-left"></span>
+				一念乾坤
+			</a>
+		</div>
+		<div class="tese_text ts9" style="display:none">
+			<a class="jieshao">S.H.I.E.L.D. Protect The World. If I'm the only one,I'm better than none.</a>
+			<a class="youling" href="" title="诛仙一念乾坤">
+		   		<span class="line line-top"></span>
+				<span class="line line-right"></span>
+				<span class="line line-bottom"></span>
+				<span class="line line-left"></span>
+				一念乾坤
+			</a>
+		</div>
+		</div>
+		<div class="ts_right">
+			<li class="on">流苏晚晴，云水漂流</li>
+			<li class="">南柯一梦，同心协力</li>
+			<li class="">西荒南土，阴阳两极</li>
+			<li class="">日月星辰，为吾所尊</li>
+			<li class="">诸天神魔，吾力破之</li>
+			<li class="">南土一梦，同心协力</li>
+			<li class="">西荒南土，阴阳两极</li>
+			<li class="">日月星辰，为吾所尊</li>
+			<li class="">诸天神魔，吾力破之</li>
+		</div>
+	</div>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(
+	       function(){
+		  	if($("div").hasClass("slider_con")==true){
+			
+			
+				var timer,inow=0;
+				function mover(){
+					$(".slider_con div").stop(false,true).fadeOut(800).eq(inow).fadeIn(800);
+					$(".ts_right li").removeClass("on").eq(inow).addClass("on");
+				}
+			
+				function automove(){
+		 			if(inow==$(".slider_con div").length-1){
+					inow=0;
+				}else{
+			  		inow++;
+				}
+				mover();
+				}
+				
+	  	 timer=setInterval(automove,5000);
+		 $(".ts_right li").hover(function(){clearInterval(timer);},function(){timer=setInterval(automove,5000)});
+		$(".ts_right li").mouseover(function(){if($(this).hasClass("on")==false){inow=$(this).index()-1; automove(); clearInterval(timer)}});
+				
+		}
+	  }
+    );
+	</script>
+</body>
+</html>
