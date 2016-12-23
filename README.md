@@ -6,3 +6,4 @@ hello world my name is java nice to see you
 learing github 
 >>>>>>>
 merge branch!
+this is a stash test! stash stash! stash! stash!
