@@ -7,3 +7,7 @@ learing github
 >>>>>>>
 merge branch!
 this is a stash test! stash stash! stash! stash!
+>>>>>>>
+this is test!
+in dev breanch fix file and will push this branch into origin branch
+and we will see this push will push while branch!
